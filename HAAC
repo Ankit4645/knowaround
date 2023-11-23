@@ -435,3 +435,734 @@ public class registration extends AppCompatActivity {
         startActivity(i);
     }
 }
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Front">
+
+
+    <ImageButton
+        android:id="@+id/medicineB"
+        android:layout_width="0dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="204dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/DairyB"
+        app:layout_constraintStart_toEndOf="@+id/serviceB"
+        app:srcCompat="@drawable/medicinelogo" />
+
+    <ImageButton
+        android:id="@+id/foodB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/food"
+        app:layout_constraintEnd_toStartOf="@+id/groceryB"
+        app:layout_constraintStart_toEndOf="@+id/retailB"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:srcCompat="@drawable/foodlog" />
+
+    <ImageButton
+        android:id="@+id/groceryB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/foodB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/foodB"
+        app:layout_constraintTop_toTopOf="@+id/foodB"
+        app:srcCompat="@drawable/grocerylog" />
+
+    <ImageButton
+        android:id="@+id/retailB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/foodB"
+        app:layout_constraintEnd_toStartOf="@+id/foodB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/foodB"
+        app:srcCompat="@drawable/retaillog" />
+
+    <ImageButton
+        android:id="@+id/serviceB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/medicineB"
+        app:layout_constraintEnd_toStartOf="@+id/medicineB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/medicineB"
+        app:srcCompat="@drawable/serviceslogo" />
+
+    <ImageButton
+        android:id="@+id/DairyB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/medicineB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/medicineB"
+        app:layout_constraintTop_toTopOf="@+id/medicineB"
+        app:srcCompat="@drawable/dairylog" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="49dp"
+        android:text="RETAILS"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/food"
+        app:layout_constraintEnd_toStartOf="@+id/food"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/food" />
+
+    <TextView
+        android:id="@+id/food"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="208dp"
+        android:text="FOOD"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/DairyB"
+        app:layout_constraintEnd_toStartOf="@+id/Groc"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+    <TextView
+        android:id="@+id/Groc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="14dp"
+        android:text="GROCERY"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/food"
+        app:layout_constraintTop_toBottomOf="@+id/groceryB" />
+
+    <TextView
+        android:id="@+id/ser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="SERVICES"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/med"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="22dp"
+        android:text="MEDICINE"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/medicineB"
+        app:layout_constraintTop_toBottomOf="@+id/medicineB" />
+
+    <TextView
+        android:id="@+id/dairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:text="DAIRY"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/med"
+        app:layout_constraintEnd_toEndOf="@+id/Groc"
+        app:layout_constraintStart_toStartOf="@+id/groceryB" />
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="AROUND YOU"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+package com.example.knowaround;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Front extends AppCompatActivity {
+    ImageButton retailButton, foodButton, groceryButton, servicesButton, medicineButton, dairyButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_front);
+
+        // Initialize ImageButton views
+        retailButton = findViewById(R.id.retailB);
+        foodButton = findViewById(R.id.foodB);
+        groceryButton = findViewById(R.id.groceryB);
+        servicesButton = findViewById(R.id.serviceB);
+        medicineButton = findViewById(R.id.medicineB);
+        dairyButton = findViewById(R.id.DairyB);
+
+        // Set click listeners for each ImageButton
+        retailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentr = new Intent(getApplicationContext(), retailpage.class);
+                startActivity(intentr);
+            }
+        });
+
+        foodButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentf = new Intent(getApplicationContext(), foodpage.class);
+                startActivity(intentf);
+
+            }
+        });
+
+        groceryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentg = new Intent(getApplicationContext(), grocerypage.class);
+                startActivity(intentg);
+
+            }
+        });
+
+        servicesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intents = new Intent(getApplicationContext(), servicepage.class);
+                startActivity(intents);
+
+            }
+        });
+
+        medicineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentm = new Intent(getApplicationContext(), medicinepage.class);
+                startActivity(intentm);
+
+            }
+        });
+
+        dairyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentd = new Intent(getApplicationContext(), daiirypage.class);
+                startActivity(intentd);
+
+            }
+        });
+    }
+
+    // Method to open the new activity
+
+}
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medicinepage">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="MEDICAL SHOPS"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="36dp"
+        android:text="Pharmacy plus"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hemopathyhubBT"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton19" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="164dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="67dp"
+        android:text="HEALTH HAVEN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/firstaidBT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="132dp"
+        android:text="HOMEOPTHY HUB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hemopathyhubBT" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="132dp"
+        android:text="FIRSTAID MART"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/firstaidBT" />
+
+    <ImageView
+        android:id="@+id/hemopathyhubBT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toStartOf="@+id/firstaidBT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/hemopathy" />
+
+    <ImageView
+        android:id="@+id/firstaidBT"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hemopathyhubBT"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/firstaid" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="7dp"
+        android:contentDescription="medicare of the products"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medicare" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="9dp"
+        android:contentDescription="health heaven of the products"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/healthhaven_j_eg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+package com.example.knowaround;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.*;
+
+public class medicinepage extends AppCompatActivity {
+  ImageButton medb;
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_medicinepage);
+        medb = findViewById(R.id.imageButton5);
+        medb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent hr = new Intent(getApplicationContext(), healthhavenpage.class);
+                startActivity(hr);
+            }
+        });
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".healthhavenpage">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="138dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/medicare" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="70dp"
+        android:text="Quantity"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextText"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="454dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="124dp"
+        android:ems="10"
+        android:hint="Enter Quantity"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/res"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="3dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="144dp"
+        android:text="Submit"
+        android:onCLick="submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+package com.example.knowaround;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+public class healthhavenpage extends AppCompatActivity {
+    Spinner spinner;
+    Button b;
+    TextView a1;
+    EditText a;
+    String[] medicine = {"Painkiller :  RS.10/- ","Antibiotics:  RS.20/-","Cough Syrup:  RS.30/-","Vitamins:  RS.40/-","First Aid Kit:  RS.50/-"};
+    String medicineselected;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_healthhavenpage);
+        a = findViewById(R.id.editTextText);
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, medicine);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                medicineselected = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+    }
+    public void submit(View v)
+    {
+        Intent tmkc = new Intent(getApplicationContext() , address.class);
+        startActivity(tmkc);
+    }
+}<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PHNOB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".address">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="22dp"
+        android:text="Enter Name :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameB"
+        app:layout_constraintEnd_toStartOf="@+id/nameB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nameB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="enter name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="17dp"
+        android:text="PHONE NUMBER :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText3"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="enter ph number"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textView20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/nameB" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Address :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addB"
+        app:layout_constraintStart_toStartOf="@+id/addB"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
+    <EditText
+        android:id="@+id/addB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="enter address"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="230dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="61dp"
+        android:onClick="placeOrder"
+        android:text="confirm order"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+package com.example.knowaround;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
+public class address extends AppCompatActivity {
+EditText name,phno,addr;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_address);
+        name=findViewById(R.id.nameB);
+        phno=findViewById(R.id.PHNOB);
+        addr=findViewById(R.id.addB);
+
+
+    }
+
+    public void placeOrder(View v) {
+        Intent innnnn = new Intent(getApplicationContext(), confirm.class);
+        String pname=name.getText().toString();
+        String pphno=phno.getText().toString();
+        String paddr=addr.getText().toString();
+        innnnn.putExtra("NAME",pname);
+        innnnn.putExtra("PHNO",pphno);
+        innnnn.putExtra("ADDRESS",paddr);
+
+
+        startActivity(innnnn);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
