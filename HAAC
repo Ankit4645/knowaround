@@ -9,73 +9,72 @@
 
     <TextView
         android:id="@+id/compname"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="199dp"
-        android:layout_marginBottom="86dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="35dp"
         android:text="KNOW AROUND"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/Euser"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginEnd="82dp"
+        android:layout_width="157dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="71dp"
         android:onClick="login"
         android:text="LOGIN"
-        app:layout_constraintBaseline_toBaselineOf="@+id/register"
-        app:layout_constraintEnd_toStartOf="@+id/register"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/Nuser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Euser" />
 
     <Button
         android:id="@+id/register"
-        android:layout_width="0dp"
+        android:layout_width="177dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="458dp"
+        android:layout_marginBottom="33dp"
         android:onClick="register"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/login"
-        app:layout_constraintTop_toBottomOf="@+id/Euser" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nuser" />
 
     <TextView
         android:id="@+id/Euser"
-        android:layout_width="0dp"
+        android:layout_width="242dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="87dp"
+        android:layout_marginBottom="33dp"
         android:text="ALREADY USER ?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compname" />
+
+    <TextView
+        android:id="@+id/Nuser"
+        android:layout_width="222dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:text="NEW USER ?"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Nuser"
-        app:layout_constraintTop_toBottomOf="@+id/compname" />
-
-    <TextView
-        android:id="@+id/Nuser"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="82dp"
-        android:text="NEW USER ?"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/Euser"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Euser" />
+        app:layout_constraintTop_toBottomOf="@+id/login" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -229,14 +228,14 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         name = findViewById(R.id.NameBox);
         pass = findViewById(R.id.PassBox);
         btn = findViewById(R.id.SubmitBtn);
     }
     public void Submit(View v)
     {
-        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        Intent i = new Intent(getApplicationContext(), Front.class);
         startActivity(i);
     }
 }
@@ -354,6 +353,7 @@ public class Login extends AppCompatActivity {
         android:layout_marginTop="26dp"
         android:layout_marginEnd="12dp"
         android:text="Submit"
+        android:onClick="next"
         app:layout_constraintEnd_toStartOf="@+id/GenderGroup"
         app:layout_constraintTop_toBottomOf="@+id/GenderGroup" />
 
@@ -416,7 +416,7 @@ public class registration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registration);
         name = findViewById(R.id.NameBox);
         pass = findViewById(R.id.pass);
         mobile = findViewById(R.id.mob);
